@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Remover | Professional AI-Powered Tool</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>BG<span>Remover</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact" class="contact-btn">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="animated-bg">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+            <div class="shape shape4"></div>
+            <div class="shape shape5"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h2>Effortless Background Removal in Seconds</h2>
+                <p>Enhance your images with our AI-powered tool—no design skills required.</p>
+                <div class="animated-demo">
+                    <div class="demo-image-container">
+                        <div class="demo-image demo-original"></div>
+                        <div class="demo-image demo-processed"></div>
+                        <div class="demo-slider"></div>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <button id="upload-btn" class="primary-btn">Upload Your Image</button>
+                    <button id="sample-btn" class="secondary-btn">View Sample</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Area Section -->
+    <section id="upload-section" class="upload-area">
+        <div class="container">
+            <h2>Remove Background from Your Image</h2>
+            <p>Drag & drop your image or click to browse</p>
+            <div class="upload-box" id="drop-area">
+                <input type="file" id="file-input" accept="image/*" hidden>
+                <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <p>Drag & drop your image here</p>
+                <span>or</span>
+                <button id="browse-btn" class="browse-btn">Browse Files</button>
+                <p class="file-info">Supported formats: JPG, PNG, WEBP (Max size: 5MB)</p>
+            </div>
+            <div class="upload-progress" id="upload-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p id="progress-text">Processing: 0%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Result Section (Initially Hidden) -->
+    <section id="result-section" class="result-section hidden">
+        <div class="container">
+            <h2>Your Image is Ready!</h2>
+            <div class="result-container">
+                <div class="result-comparison">
+                    <div class="original-image">
+                        <h3>Original</h3>
+                        <img id="original-image" src="" alt="Original Image">
+                    </div>
+                    <div class="processed-image">
+                        <h3>Background Removed</h3>
+                        <img id="processed-image" src="" alt="Processed Image">
+                    </div>
+                </div>
+                <div class="download-options">
+                    <h3>Download Options</h3>
+                    <div class="option-buttons">
+                        <button id="download-png" class="download-btn">Download PNG</button>
+                        <button id="download-jpg" class="download-btn">Download JPG</button>
+                    </div>
+                </div>
+                <button id="try-another" class="secondary-btn">Process Another Image</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Powerful Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Processing</h3>
+                    <p>Get your images processed in seconds with our advanced AI technology.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Precision</h3>
+                    <p>Our AI algorithm ensures precise background removal even for complex images.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Batch Processing</h3>
+                    <p>Process multiple images at once to save time and increase productivity.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Processing</h3>
+                    <p>Your images are processed securely and deleted after download.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Upload</h3>
+                    <p>Upload your image using our drag & drop interface or file browser.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Process</h3>
+                    <p>Our AI technology automatically detects and removes the background.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Download</h3>
+                    <p>Download your image with a transparent background in your preferred format.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Elements Section -->
+    <section class="trust-elements">
+        <div class="container">
+            <h2>Trusted By</h2>
+            <div class="client-logos">
+                <div class="logo-item">Company 1</div>
+                <div class="logo-item">Company 2</div>
+                <div class="logo-item">Company 3</div>
+                <div class="logo-item">Company 4</div>
+            </div>
+            <div class="testimonials" id="testimonials">
+                <div class="testimonial-card">
+                    <div class="quote">"This tool saved me countless hours of editing. The results are professional and accurate!"</div>
+                    <div class="author">- Sarah Johnson, Photographer</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"Perfect for my e-commerce product photos. Clean, transparent backgrounds every time."</div>
+                    <div class="author">- Michael Rodriguez, Online Store Owner</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"The speed and accuracy of this tool have improved my workflow tremendously."</div>
+                    <div class="author">- Emma Chen, Graphic Designer</div>
+                </div>
+            </div>
+            <div class="security-badges">
+                <div class="badge"><i class="fas fa-lock"></i> SSL Secured</div>
+                <div class="badge"><i class="fas fa-shield-alt"></i> Privacy Protected</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What file formats are supported?</h3>
+                        <div class="toggle-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We support JPEG, PNG, and WEBP formats. The maximum file size is 5MB.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does processing take?</h3>
+                        <div class="toggle-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most images are processed within seconds, but processing time may vary depending on image complexity and size.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is there a limit to how many images I can process?</h3>
+                        <div class="toggle-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, our free version allows you to process up to 5 images per day.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How accurate is the background removal?</h3>
+                        <div class="toggle-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our AI algorithm provides highly accurate results for most images. Complex edges like hair and fur are handled with precision.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Have questions or feedback? We'd love to hear from you.</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="primary-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>BG<span>Remover</span></h2>
+                    <p>Professional AI-powered background removal tool.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: info@bgremover.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BG Remover. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sample Preview Modal -->
+    <div id="sample-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>See Before & After</h2>
+            <div class="sample-images">
+                <div>
+                    <h3>Before</h3>
+                    <img src="images/Flux_Dev_a_highly_detailed_3D_render_of_a_whimsical_vibrant_an_2.jpg" alt="Sample Before Image">
+                </div>
+                <div>
+                    <h3>After</h3>
+                    <img src="images/background-removed.png" alt="Sample After Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
